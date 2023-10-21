@@ -11,7 +11,7 @@ const CustomerDatabase = () => {
 
     useEffect(() => {
         !user && navigate('/login')
-    }, []);
+    }, [])
 
     return (
         <>
