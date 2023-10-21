@@ -27427,7 +27427,7 @@ ol.linenums li {
 .dropzone .dz-message-or {
   font-size: 16px;
   margin-bottom: 4px;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .dropzone .dz-preview {
@@ -34727,6 +34727,7 @@ body.nav-shown {
 
 .nk-header.is-light:not([class*=bg-]) {
   background: #004BA7;
+  border-bottom: 1px solid #004BA7;
 }
 
 .nk-header.is-theme:not([class*=bg-]) {
@@ -35222,7 +35223,7 @@ div.dataTables_wrapper div.dataTables_filter .nk-header-search input,
   padding: 14px 24px;
   min-width: 100%;
   width: 290px;
-  height: 73px;
+  height: 77px;
   background: #004BA7;
 }
 
@@ -50793,7 +50794,7 @@ div.dataTables_wrapper div.dataTables_filter .dark-mode .nk-header-search input,
   height: 0px;
   display: inline-block;
   left: -8px;
-  color: #1A8C5DA;
+  color: #1A8C5D;
 }
 .circleChartFlex {
   display: flex;
@@ -50817,5 +50818,161 @@ div.dataTables_wrapper div.dataTables_filter .dark-mode .nk-header-search input,
   background: #004ba7;
   margin-top: 20px;
 }
+
+.nk-content {
+  margin-top: 50px;
+  position: relative;
+  background: #fff;
+}
+.text-grey {
+  color:#000;
+}
+.slectDraftBnt {
+     background: #1C1D22;
+    color: #fff;
+}
+.lightBlue {
+  background-color: #5570F1;
+  border-color: #5570F1;
+}
+.whatNewInput input {
+    background: #efefef;
+    color: #000;
+}
+.whatNewInput input:focus {
+  border-bottom: 1px solid #004BA7;
+  border: 1px solid #004BA7;
+} 
+.whatNewInput textarea {
+  background: #efefef;
+  color: #000;
+}
+.whatNewInput textarea:focus {
+border-bottom: 1px solid #004BA7;
+border: 1px solid #004BA7;
+} 
+.discountExpireBox {
+  display: flex;
+  justify-content: space-between;
+}
+.imgUploadIcon {
+  margin: 0px auto;
+  display: block;
+}
+.uploadTxt {
+  display: flex;
+  text-align: center;
+  margin: 0px auto;
+  color: #004ba7;
+}
+.uploadTxt-small {
+  display: flex;
+  text-align: center;
+  margin: 0px auto;
+  color: #004ba7;
+  font-size: 12px;
+}
+.smallBoxUpload .dz-message {
+  /* display: none; */
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.smallBoxUpload {
+  background: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  padding-top: 30px;
+  min-height: 150px;
+  position: relative;
+}
+.filterBnt {
+     background: #F7F9FB;
+     border: 1px solid #F7F9FB;
+}
+.thiryday {
+  background: #F7F9FB;
+  border: 1px solid #F7F9FB;
+  padding: 5px 15px;
+  border-radius: 5px;
+  height: 36px;
+  color:#343352;
+  margin-right: 10px;
+}
+.tableTabsSpan {
+  background: #F7F9FB;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 20px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+.brBtmNone {
+  border-bottom: none;
+}
+.fRight {
+  float:right;
+}
+.whatSnewTable .tb-odr-item td {
+    padding-left: 1.25rem !important;
+}
+.tableImageUser .user-card {
+  display: flex;
+  align-items: center;
+  width: 350px;
+  white-space: normal;
+}
+.tableImageUser .user-avatar {
+  border-radius: 0%;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+  position: relative;
+}
+.tableImageUser .user-avatar img {
+  border-radius: 0%;
+}
+.tableImageUser .user-name {
+  color: #000;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.tableImageUser .user-name .tb-lead {
+    margin-bottom: 5px;
+    display: block;
+}
+
+.exportDrop {
+  background: #1C1D22;
+  color: #fff;
+  width: 150px;
+  justify-content: space-between;
+}
+
+
+@media (max-width: 680px) {
+.nk-header-brand {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.logo-img {
+  max-height: 70px;
+}
+}
+
+
 
 /*! END @iO */

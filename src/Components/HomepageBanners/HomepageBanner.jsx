@@ -56,83 +56,140 @@ const HomepageBanner = () => {
                                 visible={true}
                             />
                         </div>
-                        : <div className="nk-content mt-5 ">
+                        : <div className="nk-content mt-10">
                             <div className="container">
                                 <div className="nk-content-inner">
                                     <div className="nk-content-body">
-                                        <div className="nk-block-head nk-block-head-sm">
-                                            <div className="nk-block-between">
-                                                <div className="nk-block-head-content">
-                                                    <h3 className="nk-block-title page-title">Products</h3>
-                                                </div>{/* .nk-block-head-content */}
-                                                <div className="nk-block-head-content">
-                                                    <div className="toggle-wrap nk-block-tools-toggle">
-                                                        <a href="#" className="btn btn-icon btn-trigger toggle-expand me-n1" data-target="pageMenu"><em className="icon ni ni-more-v" /></a>
-                                                        <div className="toggle-expand-content" data-content="pageMenu">
-                                                            <ul className="nk-block-tools g-3">
-                                                                <li>
-                                                                    <div className="form-control-wrap">
-                                                                        <div className="form-icon form-icon-right">
-                                                                            <em className="icon ni ni-search" />
-                                                                        </div>
-                                                                        <input type="text" className="form-control" id="default-04" placeholder="Quick search by id" />
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div className="drodown">
-                                                                        <a href="#" className="dropdown-toggle dropdown-indicator btn btn-outline-light btn-white" data-bs-toggle="dropdown">Status</a>
-                                                                        <div className="dropdown-menu dropdown-menu-end">
-                                                                            <ul className="link-list-opt no-bdr">
-                                                                                <li><a href="#"><span>New Items</span></a></li>
-                                                                                <li><a href="#"><span>Featured</span></a></li>
-                                                                                <li><a href="#"><span>Out of Stock</span></a></li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li className="nk-block-tools-opt">
-                                                                    <a href="#" data-target="addProduct" className="toggle btn btn-icon btn-primary d-md-none"><em className="icon ni ni-plus" /></a>
-                                                                    <a href="#" data-target="addProduct" className="toggle btn btn-primary d-none d-md-inline-flex"><em className="icon ni ni-plus" /><span>Add Product</span></a>
-                                                                </li>
-                                                            </ul>
+                                    <div className="nk-block-head nk-block-head-sm mt-3">
+                                        <div className="nk-block-between">
+                                            <div className="nk-block-head-content">
+                                                <h4 className="nk-block-title page-title">The Pool Store / 
+                                                  <span>What’s New</span>
+                                                </h4>
+                                            </div>{/* .nk-block-head-content */}
+                                        </div>{/* .nk-block-between */}
+                                    </div>{/* .nk-block-head */}
+
+
+                                    <div className="nk-block">
+                                        <div className="row g-gs">
+                                           <div className="col-md-6">
+                                              <div className="circleChartFlex">
+                                                  <div className="">
+                                                     <span>Banners activity</span>
+                                                     <h6>Showing all 07 banners</h6>
+                                                  </div>
+
+                                              <div className="d-flex">
+                                                <a href="" className="thiryday">30 Days</a>
+                                                  <div class="drodown">
+                                                     <a href="#" class="dropdown-toggle btn btn-outline-light btn-white filterBnt" data-bs-toggle="dropdown" aria-expanded="false">Filter 
+                                                     <em class="icon ni ni-filter-alt"></em></a>
+                                                      <div class="dropdown-menu dropdown-menu-end">
+                                                        <ul class="link-list-opt no-bdr">
+                                                            <li><a href="#"><span>- Price Low to high</span></a></li>
+                                                            <li><a href="#"><span>- Price High to Low</span></a></li>
+                                                        </ul>
                                                         </div>
                                                     </div>
-                                                </div>{/* .nk-block-head-content */}
-                                            </div>{/* .nk-block-between */}
-                                        </div>{/* .nk-block-head */}
-                                        <div className="nk-block">
-                                            <div className="d-flex flex-wrap ">
-                                                {/* <div className="col-xxl-3 col-lg-4 col-sm-6"> */}
-                                                {bannerData.length > 0 &&
-                                                    bannerData.map(data => {
-
-                                                        return <div key={data.id} className="m-1" style={{ width: "23%" }}>
-                                                            <div className="card card-bordered rounded-5">
-                                                                <div className="product-thumb m-1">
-                                                                    <img src={bannerImage} alt="" />
-                                                                </div>
-                                                                <div className="card-inner p-1 mx-2">
-                                                                    <p className='product-tag m-0 mb-1 fs-12px'>Created by - Pratik Banger</p>
-                                                                    <h6 className="product-title fs-15px m-0">{data.title}</h6>
-                                                                    <small className="fs-12px">{moment(data.start_date).format("DD MMM")} - {moment(data.end_date).format("DD-MMM")}</small>
-                                                                    <p className='fs-12px mt-2'>{data.description}</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    })
-                                                }
+                                                  </div>  
+                                               </div>     
+                                           </div>
+                                           <div className="col-md-6">
+                                                <div className="form-control-wrap searchBarTable">
+                                                  <div className="form-icon form-icon-right">
+                                                    <em className="icon ni ni-search"></em></div>
+                                                     <input type="text" className="form-control" id="fv-email" name="fv-email" placeholder='Search Here...'/>
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        {bannerData.length == 0
+                                        </div>{/* .row */}
+                                    </div>
+
+
+
+                                    <div className="nk-block">
+                                        <div className="row g-gs">
+                                             <div className="col-md-9">
+                                                <ul class="nav nav-tabs mt-n3 brBtmNone" role="tablist">
+                                                    <li class="nav-item" role="presentation"><a class="nav-link active" data-bs-toggle="tab" href="#tabItem1" aria-selected="true" role="tab">Active Banners <span className="tableTabsSpan"> 23</span></a></li>
+                                                    <li class="nav-item" role="presentation"><a class="nav-link" data-bs-toggle="tab" href="#tabItem2" aria-selected="false" role="tab" tabindex="-1">Completed <span className="tableTabsSpan"> 14</span></a></li>
+                                                    <li class="nav-item" role="presentation"><a class="nav-link" data-bs-toggle="tab" href="#tabItem3" aria-selected="false" role="tab" tabindex="-1">Unfinished <span className="tableTabsSpan"> 35</span></a></li>
+
+                                                </ul>
+                                             </div>
+                                             <div className="col-md-3">
+											   <a href="#" className="btn btn-primary lightBlue d-md-inline-flex fRight">Add New Banner</a>
+										    </div>
+
+
+                                            <div className="col-md-12">
+                                                <div className="tab-content">
+                                                    <div className="tab-pane active show" id="tabItem1" role="tabpanel">
+                                                      <div className="row">
+                                                        {/* <div className="col-xxl-3 col-lg-4 col-sm-6"> */}
+                                                        {bannerData.length > 0 &&
+                                                            bannerData.map(data => {
+
+                                                                return <div key={data.id} className="col-lg-3">
+                                                                    <div className="card card-bordered rounded-5">
+                                                                        <div className="product-thumb m-1">
+                                                                            <img src={bannerImage} alt="" />
+                                                                        </div>
+                                                                        <div className="card-inner p-1 mx-2">
+                                                                            <p className='product-tag m-0 mb-1 fs-12px'>Created by - Pratik Banger</p>
+                                                                            <h6 className="product-title fs-15px m-0">{data.title}</h6>
+                                                                            <small className="fs-12px">{moment(data.start_date).format("DD MMM")} - {moment(data.end_date).format("DD-MMM")}</small>
+                                                                            <p className='fs-12px mt-2'>{data.description}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            })
+                                                        }
+                                                   </div>
+                                            </div>
+
+
+                                            <div class="tab-pane" id="tabItem2" role="tabpanel">
+                                                <div className="row">
+                                                    <div className="col-lg-3">
+                                                        <h1>TAB 2</h1>
+                                                        {bannerData.length == 0
                                             && <div className='mt-5 d-flex justify-content-center align-item-center'>
                                                 <h6>No Data Available</h6>
                                             </div>
                                         }
+                                                    </div>  
+                                                </div>     
+                                            </div>   
+
+
+                                            <div class="tab-pane" id="tabItem3" role="tabpanel">
+                                                <div className="row">
+                                                    <div className="col-lg-3">
+                                                        <h1>TAB 3</h1>
+                                                        {bannerData.length == 0
+                                                            && <div className='mt-5 d-flex justify-content-center align-item-center'>
+                                                                <h6>No Data Available</h6>
+                                                            </div>
+                                                        }
+                                                    </div>  
+                                                </div>     
+                                            </div>      
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                                       
 
                                         {/* Modal */}
-                                        <div className="nk-add-product toggle-slide toggle-slide-right" data-content="addProduct" data-toggle-screen="any" data-toggle-overlay="true" data-toggle-body="true" data-simplebar>
-                                            <div className="nk-block-head">
+            <div className="nk-add-product toggle-slide toggle-slide-right" data-content="addProduct" data-toggle-screen="any" data-toggle-overlay="true" data-toggle-body="true" data-simplebar>
+                        <div className="nk-block-head">
                                                 <div className="nk-block-head-content">
                                                     <h5 className="nk-block-title">New Product</h5>
                                                     <div className="nk-block-des">

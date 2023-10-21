@@ -58,190 +58,314 @@ const Products = () => {
                             <div className="container-fluid">
                                 <div className="nk-content-inner">
                                     <div className="nk-content-body">
-                                        <div className="nk-block-head nk-block-head-sm">
-                                            <div className="nk-block-between">
-                                                <div className="nk-block-head-content">
-                                                    <h3 className="nk-block-title page-title">Orders</h3>
-                                                </div>{/* .nk-block-head-content */}
-                                                <div className="nk-block-head-content">
-                                                    <div className="toggle-wrap nk-block-tools-toggle">
-                                                        <a href="#" className="btn btn-icon btn-trigger toggle-expand me-n1" data-target="pageMenu"><em className="icon ni ni-more-v" /></a>
-                                                        <div className="toggle-expand-content" data-content="pageMenu">
-                                                            <ul className="nk-block-tools g-3">
-                                                                <li>
-                                                                    <div className="form-control-wrap">
-                                                                        <div className="form-icon form-icon-right">
-                                                                            <em className="icon ni ni-search" />
-                                                                        </div>
-                                                                        <input type="text" className="form-control" id="default-04" placeholder="Quick search by id" />
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div className="drodown">
-                                                                        <a href="#" className="dropdown-toggle dropdown-indicator btn btn-outline-light btn-white" data-bs-toggle="dropdown">Status</a>
-                                                                        <div className="dropdown-menu dropdown-menu-end">
-                                                                            <ul className="link-list-opt no-bdr">
-                                                                                <li><a href="#"><span>On Hold</span></a></li>
-                                                                                <li><a href="#"><span>Delivered</span></a></li>
-                                                                                <li><a href="#"><span>Rejected</span></a></li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li className="nk-block-tools-opt">
-                                                                    <a href="#" className="btn btn-icon btn-primary d-md-none"><em className="icon ni ni-plus" /></a>
-                                                                    <a href="#" className="btn btn-primary d-none d-md-inline-flex"><em className="icon ni ni-plus" /><span>Add Order</span></a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>{/* .nk-block-head-content */}
-                                            </div>{/* .nk-block-between */}
-                                        </div>{/* .nk-block-head */}
-                                        <div className="nk-block">
-                                            <div className="nk-tb-list is-separate is-medium mb-3">
-                                                {/* Table Header */}
-                                                <div className="nk-tb-item nk-tb-head">
-                                                    <div className="nk-tb-col nk-tb-col-check">
-                                                        <div className="custom-control custom-control-sm custom-checkbox notext">
-                                                            <input type="checkbox" className="custom-control-input" id="oid" />
-                                                            <label className="custom-control-label" htmlFor="oid" />
-                                                        </div>
-                                                    </div>
-                                                    <div className="nk-tb-col"><span>Order</span></div>
-                                                    <div className="nk-tb-col tb-col-md"><span>Date</span></div>
-                                                    <div className="nk-tb-col"><span className="d-none d-sm-block">Status</span></div>
-                                                    <div className="nk-tb-col tb-col-sm"><span>Customer</span></div>
-                                                    <div className="nk-tb-col tb-col-md"><span>Purchased</span></div>
-                                                    <div className="nk-tb-col"><span>Total</span></div>
-                                                    <div className="nk-tb-col nk-tb-col-tools">
-                                                        <ul className="nk-tb-actions gx-1 my-n1">
-                                                            <li>
-                                                                <div className="drodown">
-                                                                    <a href="#" className="dropdown-toggle btn btn-icon btn-trigger me-n1" data-bs-toggle="dropdown"><em className="icon ni ni-more-h" /></a>
-                                                                    <div className="dropdown-menu dropdown-menu-end">
-                                                                        <ul className="link-list-opt no-bdr">
-                                                                            <li><a href="#"><em className="icon ni ni-edit" /><span>Update Status</span></a></li>
-                                                                            <li><a href="#"><em className="icon ni ni-truck" /><span>Mark as Delivered</span></a></li>
-                                                                            <li><a href="#"><em className="icon ni ni-money" /><span>Mark as Paid</span></a></li>
-                                                                            <li><a href="#"><em className="icon ni ni-report-profit" /><span>Send Invoice</span></a></li>
-                                                                            <li><a href="#"><em className="icon ni ni-trash" /><span>Remove Orders</span></a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
+                                        
+                                    <div className="nk-block-head nk-block-head-sm mt-3">
+                                        <div className="nk-block-between">
+                                            <div className="nk-block-head-content">
+                                                <h4 className="nk-block-title page-title">The Pool Store / 
+                                                  <span>Manage produts</span>
+                                                </h4>
+                                            </div>{/* .nk-block-head-content */}
+                                            <div className="d-flex">
+                                                 <div className="drodown">
+                                                    <a href="#" className="dropdown-toggle dropdown-indicator btn btn-outline-light btn-white exportDrop" data-bs-toggle="dropdown">Export </a>
+                                                     <div className="dropdown-menu dropdown-menu-end">
+                                                        <ul className="link-list-opt no-bdr">
+                                                            <li><a href="#"><span>On Hold</span></a></li>
+                                                            <li><a href="#"><span>Delivered</span></a></li>
+                                                            <li><a href="#"><span>Rejected</span></a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
+                                            </div>  
 
-                                                {/* Product one */}
-                                                <div className="nk-tb-item">
-                                                    <div className="nk-tb-col nk-tb-col-check">
-                                                        <div className="custom-control custom-control-sm custom-checkbox notext">
-                                                            <input type="checkbox" className="custom-control-input" id="oid01" />
-                                                            <label className="custom-control-label" htmlFor="oid01" />
-                                                        </div>
-                                                    </div>
-                                                    <div className="nk-tb-col">
-                                                        <span className="tb-lead"><a href="#">#95954</a></span>
-                                                    </div>
-                                                    <div className="nk-tb-col tb-col-md">
-                                                        <span className="tb-sub">Jun 4, 2020</span>
-                                                    </div>
-                                                    <div className="nk-tb-col">
-                                                        <span className="dot bg-warning d-sm-none" />
-                                                        <span className="badge badge-sm badge-dot has-bg bg-warning d-none d-sm-inline-flex">On Hold</span>
-                                                    </div>
-                                                    <div className="nk-tb-col tb-col-sm">
-                                                        <span className="tb-sub">Arnold Armstrong</span>
-                                                    </div>
-                                                    <div className="nk-tb-col tb-col-md">
-                                                        <span className="tb-sub text-primary">3 Items</span>
-                                                    </div>
-                                                    <div className="nk-tb-col">
-                                                        <span className="tb-lead">$ 249.75</span>
-                                                    </div>
-                                                    <div className="nk-tb-col nk-tb-col-tools">
-                                                        <ul className="nk-tb-actions gx-1">
-                                                            <li className="nk-tb-action-hidden"><a href="#" className="btn btn-icon btn-trigger btn-tooltip" title="Mark as Delivered">
-                                                                <em className="icon ni ni-truck" /></a></li>
-                                                            <li className="nk-tb-action-hidden"><a href="#" className="btn btn-icon btn-trigger btn-tooltip" title="View Order">
-                                                                <em className="icon ni ni-eye" /></a></li>
-                                                            <li>
-                                                                <div className="drodown me-n1">
-                                                                    <a href="#" className="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em className="icon ni ni-more-h" /></a>
-                                                                    <div className="dropdown-menu dropdown-menu-end">
-                                                                        <ul className="link-list-opt no-bdr">
-                                                                            <li><a href="#"><em className="icon ni ni-eye" /><span>Order Details</span></a></li>
-                                                                            <li><a href="#"><em className="icon ni ni-truck" /><span>Mark as Delivered</span></a></li>
-                                                                            <li><a href="#"><em className="icon ni ni-money" /><span>Mark as Paid</span></a></li>
-                                                                            <li><a href="#"><em className="icon ni ni-report-profit" /><span>Send Invoice</span></a></li>
-                                                                            <li><a href="#"><em className="icon ni ni-trash" /><span>Remove Order</span></a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
+
+                                        </div>{/* .nk-block-between */}
+                                    </div>{/* .nk-block-head */}
+
+                                    <div className="nk-block">
+                                        <div className="row g-gs">
+                                           <div className="col-md-6">
+                                              <div className="circleChartFlex">
+                                                  <div className="">
+                                                     <span>Users summary</span>
+                                                     <h6>Showing all 150 products</h6>
+                                                  </div>
+                                                  <div className="d-flex">
+                                                <a href="" className="thiryday">30 Days</a>
+                                                  <div class="drodown">
+                                                     <a href="#" class="dropdown-toggle btn btn-outline-light btn-white filterBnt" data-bs-toggle="dropdown" aria-expanded="false">Filter 
+                                                     <em class="icon ni ni-filter-alt"></em></a>
+                                                      <div class="dropdown-menu dropdown-menu-end">
+                                                        <ul class="link-list-opt no-bdr">
+                                                            <li><a href="#"><span>- Price Low to high</span></a></li>
+                                                            <li><a href="#"><span>- Price High to Low</span></a></li>
                                                         </ul>
-                                                    </div>
-                                                </div>
-
-                                                {/* Product one */}
-                                                {productData.length > 0 &&
-                                                    productData.map(data => {
-                                                        <div className="nk-tb-item">
-                                                            <div className="nk-tb-col nk-tb-col-check">
-                                                                <div className="custom-control custom-control-sm custom-checkbox notext">
-                                                                    <input type="checkbox" className="custom-control-input" id="oid02" />
-                                                                    <label className="custom-control-label" htmlFor="oid02" />
-                                                                </div>
-                                                            </div>
-                                                            <div className="nk-tb-col">
-                                                                <span className="tb-lead"><a href="#">#{data.id}</a></span>
-                                                            </div>
-                                                            <div className="nk-tb-col tb-col-md">
-                                                                <span className="tb-sub">Jun 3, 2020</span>
-                                                            </div>
-                                                            <div className="nk-tb-col">
-                                                                <span className="dot bg-success d-sm-none" />
-                                                                <span className="badge badge-sm badge-dot has-bg bg-success d-none d-sm-inline-flex">Delivered</span>
-                                                            </div>
-                                                            <div className="nk-tb-col tb-col-sm">
-                                                                <span className="tb-sub">Jean Douglas</span>
-                                                            </div>
-                                                            <div className="nk-tb-col tb-col-md">
-                                                                <span className="tb-sub text-primary">Pink Fitness Tracker</span>
-                                                            </div>
-                                                            <div className="nk-tb-col">
-                                                                <span className="tb-lead">$ 99.49</span>
-                                                            </div>
-                                                            <div className="nk-tb-col nk-tb-col-tools">
-                                                                <ul className="nk-tb-actions gx-1">
-                                                                    <li className="nk-tb-action-hidden"><a href="#" className="btn btn-icon btn-trigger btn-tooltip" title="Mark as Delivered">
-                                                                        <em className="icon ni ni-truck" /></a></li>
-                                                                    <li className="nk-tb-action-hidden"><a href="#" className="btn btn-icon btn-trigger btn-tooltip" title="View Order">
-                                                                        <em className="icon ni ni-eye" /></a></li>
-                                                                    <li>
-                                                                    </li><li>
-                                                                        <div className="drodown me-n1">
-                                                                            <a href="#" className="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em className="icon ni ni-more-h" /></a>
-                                                                            <div className="dropdown-menu dropdown-menu-end">
-                                                                                <ul className="link-list-opt no-bdr">
-                                                                                    <li><a href="#"><em className="icon ni ni-eye" /><span>Order Details</span></a></li>
-                                                                                    <li><a href="#"><em className="icon ni ni-truck" /><span>Mark as Delivered</span></a></li>
-                                                                                    <li><a href="#"><em className="icon ni ni-money" /><span>Mark as Paid</span></a></li>
-                                                                                    <li><a href="#"><em className="icon ni ni-report-profit" /><span>Send Invoice</span></a></li>
-                                                                                    <li><a href="#"><em className="icon ni ni-trash" /><span>Remove Order</span></a></li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
                                                         </div>
-                                                    })
-                                                }
+                                                    </div>
+                                                  </div> 
+                                              </div>     
+                                           </div>
+                                           <div className="col-md-6">
+                                               <div className="form-control-wrap searchBarTable">
+                                                <div className="form-icon form-icon-right">
+                                                     <em className="icon ni ni-search"></em></div>
+                                                     <input type="text" className="form-control" id="fv-email" name="fv-email" placeholder='Search Here...'/>
+                                                </div>
+                                           </div>
+
+                                        </div>{/* .row */}
+                                    </div>
+
+
+
+                                    <div className="nk-block">
+                                        <div className="row g-gs">
+                                             <div className="col-md-9">
+                                                <ul class="nav nav-tabs mt-n3 brBtmNone" role="tablist">
+                                                    <li class="nav-item" role="presentation"><a class="nav-link active" data-bs-toggle="tab" href="#tabItem1" aria-selected="true" role="tab">All <span className="tableTabsSpan"> 04</span></a></li>
+                                                    <li class="nav-item" role="presentation"><a class="nav-link" data-bs-toggle="tab" href="#tabItem2" aria-selected="false" role="tab" tabindex="-1">Active <span className="tableTabsSpan"> 36</span></a></li>
+                                                    <li class="nav-item" role="presentation"><a class="nav-link" data-bs-toggle="tab" href="#tabItem3" aria-selected="false" role="tab" tabindex="-1">Draft <span className="tableTabsSpan"> 10</span></a></li>
+                                                    <li class="nav-item" role="presentation"><a class="nav-link" data-bs-toggle="tab" href="#tabItem4" aria-selected="false" role="tab" tabindex="-1">Archived <span className="tableTabsSpan"> 24</span></a></li>
+                                                    <li class="nav-item" role="presentation"><a class="nav-link" data-bs-toggle="tab" href="#tabItem5" aria-selected="false" role="tab" tabindex="-1">Add Filter 
+                                                    <em class="icon ni ni-plus-round-fill tableTabsSpan"></em></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div className="col-md-3">
+											<a href="#" className="btn btn-primary lightBlue d-md-inline-flex fRight">Add New Product</a>
+										</div>
+                                    </div>
+                                </div>
+
+
+                                <div className="col-md-12">
+                                    <div className="tab-content">
+                                        <div className="tab-pane active show" id="tabItem1" role="tabpanel">
+                                            <div className="card card-preview">
+                                                  <table className="table table-orders mt-3">
+                                                     <thead className="tb-odr-head dashboardTableHead">
+                                                        <tr className="tb-odr-item">
+                                                            <th className="tb-odr-info"><span className="tb-odr-id">Product ID</span></th>
+
+                                                            <th className="tb-odr-amount"><span className="tb-odr-total">Product name </span></th>
+
+                                                            <th className="tb-odr-amount"><span className="tb-odr-status">Vendor</span></th>
+
+                                                            <th className="tb-odr-amount"><span className="tb-odr-status">Status</span></th>
+                                                            
+                                                            <th className="tb-odr-amount"><span className="tb-odr-status">Inventory</span></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody className="tb-odr-body whatSnewTable">
+                                                        <tr className="tb-odr-item">
+                                                            <td className="tb-odr-info"><em class="icon ni ni-copy"></em> #TPS0965</td>
+                                                            <td className="tb-odr-info">Poolife Algaecide</td>
+                                                            <td className="tb-odr-info">ThePoolStoreValdosta</td>
+                                                            <td className="tb-odr-info">
+                                                                <span class="badge rounded-pill badge-dim bg-outline-success">Active</span>
+                                                            </td>
+                                                            <td className="tb-odr-info">245 in Stock</td>
+                                                        </tr>
+                                                        <tr className="tb-odr-item">
+                                                            <td className="tb-odr-info"><em class="icon ni ni-copy"></em> #TPS0965</td>
+                                                            <td className="tb-odr-info">Regal 25 pound Chlorinated tablets</td>
+                                                            <td className="tb-odr-info">Pool chemical</td>
+                                                            <td className="tb-odr-info">
+                                                                <span class="badge rounded-pill badge-dim bg-outline-info ">Draft</span>
+                                                            </td>
+                                                            <td className="tb-odr-info">40 in Stock</td>
+                                                        </tr>
+                                                   </tbody>
+                                                </table>
                                             </div>
+                                        </div>
+                                        <div class="tab-pane" id="tabItem2" role="tabpanel">
+                                            <div className="card card-preview">
+                                                  <table className="table table-orders mt-3">
+                                                     <thead className="tb-odr-head dashboardTableHead">
+                                                        <tr className="tb-odr-item">
+                                                            <th className="tb-odr-info"><span className="tb-odr-id">Product ID</span></th>
 
+                                                            <th className="tb-odr-amount"><span className="tb-odr-total">Product name </span></th>
+
+                                                            <th className="tb-odr-amount"><span className="tb-odr-status">Vendor</span></th>
+
+                                                            <th className="tb-odr-amount"><span className="tb-odr-status">Status</span></th>
+                                                            
+                                                            <th className="tb-odr-amount"><span className="tb-odr-status">Inventory</span></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody className="tb-odr-body whatSnewTable">
+                                                        <tr className="tb-odr-item">
+                                                            <td className="tb-odr-info"><em class="icon ni ni-copy"></em> #TPS0965</td>
+                                                            <td className="tb-odr-info">Poolife Algaecide</td>
+                                                            <td className="tb-odr-info">ThePoolStoreValdosta</td>
+                                                            <td className="tb-odr-info">
+                                                                <span class="badge rounded-pill badge-dim bg-outline-success">Active</span>
+                                                            </td>
+                                                            <td className="tb-odr-info">245 in Stock</td>
+                                                        </tr>
+                                                       
+                                                   </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="tabItem3" role="tabpanel">
+                                            <div className="card card-preview">
+                                                  <table className="table table-orders mt-3">
+                                                     <thead className="tb-odr-head dashboardTableHead">
+                                                        <tr className="tb-odr-item">
+                                                            <th className="tb-odr-info"><span className="tb-odr-id">Product ID</span></th>
+
+                                                            <th className="tb-odr-amount"><span className="tb-odr-total">Product name </span></th>
+
+                                                            <th className="tb-odr-amount"><span className="tb-odr-status">Vendor</span></th>
+
+                                                            <th className="tb-odr-amount"><span className="tb-odr-status">Status</span></th>
+                                                            
+                                                            <th className="tb-odr-amount"><span className="tb-odr-status">Inventory</span></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody className="tb-odr-body whatSnewTable">
+                                                        <tr className="tb-odr-item">
+                                                            <td className="tb-odr-info"><em class="icon ni ni-copy"></em> #TPS0965</td>
+                                                            <td className="tb-odr-info">Poolife Algaecide</td>
+                                                            <td className="tb-odr-info">ThePoolStoreValdosta</td>
+                                                            <td className="tb-odr-info">
+                                                                <span class="badge rounded-pill badge-dim bg-outline-success">Active</span>
+                                                            </td>
+                                                            <td className="tb-odr-info">245 in Stock</td>
+                                                        </tr>
+                                                        <tr className="tb-odr-item">
+                                                            <td className="tb-odr-info"><em class="icon ni ni-copy"></em> #TPS0965</td>
+                                                            <td className="tb-odr-info">Poolife Algaecide</td>
+                                                            <td className="tb-odr-info">ThePoolStoreValdosta</td>
+                                                            <td className="tb-odr-info">
+                                                                <span class="badge rounded-pill badge-dim bg-outline-success">Active</span>
+                                                            </td>
+                                                            <td className="tb-odr-info">245 in Stock</td>
+                                                        </tr>
+                                                        <tr className="tb-odr-item">
+                                                            <td className="tb-odr-info"><em class="icon ni ni-copy"></em> #TPS0965</td>
+                                                            <td className="tb-odr-info">Poolife Algaecide</td>
+                                                            <td className="tb-odr-info">ThePoolStoreValdosta</td>
+                                                            <td className="tb-odr-info">
+                                                                <span class="badge rounded-pill badge-dim bg-outline-success">Active</span>
+                                                            </td>
+                                                            <td className="tb-odr-info">245 in Stock</td>
+                                                        </tr>
+                                                       
+                                                   </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane" id="tabItem4" role="tabpanel">
+                                            <div className="card card-preview">
+                                                  <table className="table table-orders mt-3">
+                                                     <thead className="tb-odr-head dashboardTableHead">
+                                                        <tr className="tb-odr-item">
+                                                            <th className="tb-odr-info"><span className="tb-odr-id">Product ID</span></th>
+
+                                                            <th className="tb-odr-amount"><span className="tb-odr-total">Product name </span></th>
+
+                                                            <th className="tb-odr-amount"><span className="tb-odr-status">Vendor</span></th>
+
+                                                            <th className="tb-odr-amount"><span className="tb-odr-status">Status</span></th>
+                                                            
+                                                            <th className="tb-odr-amount"><span className="tb-odr-status">Inventory</span></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody className="tb-odr-body whatSnewTable">
+                                                        <tr className="tb-odr-item">
+                                                            <td className="tb-odr-info"><em class="icon ni ni-copy"></em> #TPS0965</td>
+                                                            <td className="tb-odr-info">Poolife Algaecide</td>
+                                                            <td className="tb-odr-info">ThePoolStoreValdosta</td>
+                                                            <td className="tb-odr-info">
+                                                                <span class="badge rounded-pill badge-dim bg-outline-success">Active</span>
+                                                            </td>
+                                                            <td className="tb-odr-info">245 in Stock</td>
+                                                        </tr>
+                                                        <tr className="tb-odr-item">
+                                                            <td className="tb-odr-info"><em class="icon ni ni-copy"></em> #TPS0965</td>
+                                                            <td className="tb-odr-info">Poolife Algaecide</td>
+                                                            <td className="tb-odr-info">ThePoolStoreValdosta</td>
+                                                            <td className="tb-odr-info">
+                                                                <span class="badge rounded-pill badge-dim bg-outline-success">Active</span>
+                                                            </td>
+                                                            <td className="tb-odr-info">245 in Stock</td>
+                                                        </tr>
+                                                   </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane" id="tabItem5" role="tabpanel">
+                                            <div className="card card-preview">
+                                                  <table className="table table-orders mt-3">
+                                                     <thead className="tb-odr-head dashboardTableHead">
+                                                        <tr className="tb-odr-item">
+                                                            <th className="tb-odr-info"><span className="tb-odr-id">Product ID</span></th>
+
+                                                            <th className="tb-odr-amount"><span className="tb-odr-total">Product name </span></th>
+
+                                                            <th className="tb-odr-amount"><span className="tb-odr-status">Vendor</span></th>
+
+                                                            <th className="tb-odr-amount"><span className="tb-odr-status">Status</span></th>
+                                                            
+                                                            <th className="tb-odr-amount"><span className="tb-odr-status">Inventory</span></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody className="tb-odr-body whatSnewTable">
+                                                        <tr className="tb-odr-item">
+                                                            <td className="tb-odr-info"><em class="icon ni ni-copy"></em> #TPS0965</td>
+                                                            <td className="tb-odr-info">Poolife Algaecide</td>
+                                                            <td className="tb-odr-info">ThePoolStoreValdosta</td>
+                                                            <td className="tb-odr-info">
+                                                                <span class="badge rounded-pill badge-dim bg-outline-success">Active</span>
+                                                            </td>
+                                                            <td className="tb-odr-info">245 in Stock</td>
+                                                        </tr>
+                                                        <tr className="tb-odr-item">
+                                                            <td className="tb-odr-info"><em class="icon ni ni-copy"></em> #TPS0965</td>
+                                                            <td className="tb-odr-info">Poolife Algaecide</td>
+                                                            <td className="tb-odr-info">ThePoolStoreValdosta</td>
+                                                            <td className="tb-odr-info">
+                                                                <span class="badge rounded-pill badge-dim bg-outline-success">Active</span>
+                                                            </td>
+                                                            <td className="tb-odr-info">245 in Stock</td>
+                                                        </tr>
+                                                        <tr className="tb-odr-item">
+                                                            <td className="tb-odr-info"><em class="icon ni ni-copy"></em> #TPS0965</td>
+                                                            <td className="tb-odr-info">Poolife Algaecide</td>
+                                                            <td className="tb-odr-info">ThePoolStoreValdosta</td>
+                                                            <td className="tb-odr-info">
+                                                                <span class="badge rounded-pill badge-dim bg-outline-success">Active</span>
+                                                            </td>
+                                                            <td className="tb-odr-info">245 in Stock</td>
+                                                        </tr>
+                                                   </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+
+                                    </div>
+                                </div>
+
+
+
+
+
+                                        <div className="nk-block">
                                             {/* Paginaion */}
                                             <div className="card">
                                                 <div className="card-inner">
