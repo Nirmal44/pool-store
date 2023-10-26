@@ -50954,14 +50954,15 @@ border: 1px solid #004BA7;
     margin-bottom: 5px;
     display: block;
 }
-
 .exportDrop {
   background: #1C1D22;
   color: #fff;
   width: 150px;
   justify-content: space-between;
 }
-
+.mr-3 {
+  margin-right: 15px;
+}
 
 @media (max-width: 680px) {
 .nk-header-brand {
